@@ -1,19 +1,45 @@
+mod pages;
+
 use yew::prelude::*;
+use yew_router::prelude::*;
+
+use pages::about_us::AboutUs;
+use pages::contact::Contact;
+use pages::home::Home;
+use pages::not_found::NotFound;
+use pages::products::Products;
+
+#[derive(Clone, Routable, PartialEq)]
+enum Route {
+    #[at("/")]
+    Home,
+    #[at("/products")]
+    Products,
+    #[at("/about-us")]
+    AboutUs,
+    #[at("/contact")]
+    Contact,
+    #[not_found]
+    #[at("/404")]
+    NotFound,
+}
+
+fn switch(routes: Route) -> Html {
+    match routes {
+        Route::Home => html! { <Home /> },
+        Route::Products => html! { <Products /> },
+        Route::AboutUs => html! { <AboutUs /> },
+        Route::Contact => html! { <Contact /> },
+        Route::NotFound => html! { <NotFound /> },
+        _ => html! { <h1>{ "404" }</h1> },
+    }
+}
 
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
-        <div class="p-4">
-            <button class="btn btn-primary">{"Primary Button"}</button>
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">{"Card title"}</h2>
-                    <p>{"If a dog chews shoes whose shoes does he choose?"}</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">{"Buy Now"}</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <BrowserRouter>
+            <Switch<Route> render={switch} />
+        </BrowserRouter>
     }
 }
