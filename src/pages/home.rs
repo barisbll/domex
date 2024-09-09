@@ -4,13 +4,17 @@ use yew::prelude::*;
 pub fn home() -> Html {
     html! {
         <div class="relative flex flex-col w-full h-screen">
-            // Video Background
-            <video autoplay={true} loop={true} muted={true} class="absolute top-0 left-0 w-full h-full object-cover z-[10]">
-                <source src="/static/video/header_construction_door.mp4" type="video/mp4" />
-                { "Your browser does not support the video tag." }
-            </video>
+            // Video background container with a semi-transparent overlay effect
+            <div class="absolute top-0 left-0 w-full h-full z-[0]">
+                <video autoplay={true} loop={true} muted={true} class="w-full h-full object-cover opacity-25">
+                    <source src="/static/video/header_construction_door.mp4" type="video/mp4" />
+                    { "Your browser does not support the video tag." }
+                </video>
+            </div>
 
-                // Navigation Bar (Example)
+            // Content on top of the video
+            <div class="relative z-[10] flex flex-col w-full h-full">
+                // Navigation Bar
                 <nav class="navbar bg-base-100 w-full py-4 bg-transparent">
                     <div class="navbar-start pl-8">
                         <div class="flex-1">
@@ -26,10 +30,11 @@ pub fn home() -> Html {
                 </nav>
 
                 // Text in the middle of the video
-                <div class="text-center">
+                <div class="flex flex-col justify-center items-center text-center flex-grow">
                     <h1 class="text-5xl text-white font-extrabold">{"Welcome to Our Website"}</h1>
                     <p class="text-2xl text-gray-200 mt-4">{"Innovative Solutions for Your Business"}</p>
                 </div>
+            </div>
         </div>
     }
 }
