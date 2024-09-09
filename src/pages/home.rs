@@ -5,10 +5,11 @@ pub fn home() -> Html {
     html! {
         <div class="relative flex flex-col w-full h-screen">
             // Video Background
-            // <video autoplay={true} loop={true} muted={true} class="absolute top-0 left-0 w-full h-full object-cover z-[10]">
-            //     <source src="/static/video/header_construction_door.mp4" type="video/mp4" />
-            //     { "Your browser does not support the video tag." }
-            // </video>
+            <video autoplay={true} loop={true} muted={true} class="absolute top-0 left-0 w-full h-full object-cover z-[10]">
+                <source src="/static/video/header_construction_door.mp4" type="video/mp4" />
+                { "Your browser does not support the video tag." }
+            </video>
+
                 // Navigation Bar (Example)
                 <nav class="navbar bg-base-100 w-full py-4 bg-transparent">
                     <div class="navbar-start pl-8">
