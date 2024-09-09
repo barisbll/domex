@@ -31,7 +31,7 @@ fn switch(routes: Route) -> Html {
         Route::AboutUs => html! { <AboutUs /> },
         Route::Contact => html! { <Contact /> },
         Route::NotFound => html! { <NotFound /> },
-        _ => html! { <h1>{ "404" }</h1> },
+        _ => html! { <NotFound /> },
     }
 }
 
