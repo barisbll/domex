@@ -4,15 +4,18 @@ use yew::prelude::*;
 pub fn home() -> Html {
     html! {
         <div class="relative flex flex-col w-full h-screen">
-            // Video background container with a semi-transparent overlay effect
+            // Video background container
             <div class="absolute top-0 left-0 w-full h-full z-[0]">
-                <video autoplay={true} loop={true} muted={true} class="w-full h-full object-cover opacity-25">
+                <video autoplay={true} loop={true} muted={true} class="w-full h-full object-cover">
                     <source src="/static/video/header_construction_door.mp4" type="video/mp4" />
                     { "Your browser does not support the video tag." }
                 </video>
             </div>
 
-            // Content on top of the video
+            // Black overlay for darkening effect
+            <div class="absolute top-0 left-0 w-full h-full bg-neutral opacity-75 z-[5]"></div>
+
+            // Content on top of the video and overlay
             <div class="relative z-[10] flex flex-col w-full h-full">
                 // Navigation Bar
                 <nav class="navbar bg-base-100 w-full py-4 bg-transparent">
