@@ -1,5 +1,5 @@
 use wasm_bindgen::JsCast;
-use web_sys::{Element, HtmlInputElement};
+use web_sys::HtmlInputElement;
 use yew::prelude::*;
 
 #[function_component(NavBar)]
@@ -48,23 +48,25 @@ pub fn navbar() -> Html {
                 <a href="/" class="btn btn-ghost text-2xl">{"DOMEX"}</a>
             </div>
             <div class="navbar-end pr-8">
-                // Mobile hamburger menu button
-                <div class="lg:hidden">
-                    <label for="menu-toggle" class="btn btn-square btn-ghost text-white" onclick={toggle_menu.clone()}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </label>
-                </div>
 
-                // Menu items
-                <ul id="menu-items" class="hidden lg:flex lg:gap-5">
-                    <li><a href="/" class="text-white text-xl font-bold">{"Strona Główna"}</a></li>
-                    <li><a href="/products" class="text-white text-xl font-bold">{"Produkty"}</a></li>
-                    <li><a href="/about-us" class="text-white text-xl font-bold">{"O Nas"}</a></li>
-                    <li><a href="/contact" class="text-white text-xl font-bold">{"Kontakt"}</a></li>
-                </ul>
+            // Mobile hamburger menu button
+            <div class="lg:hidden">
+                <label for="menu-toggle" class="btn btn-square btn-ghost text-white" onclick={toggle_menu.clone()}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </label>
             </div>
+
+            // Menu items
+            <ul id="menu-items" class="hidden lg:flex lg:gap-5">
+            <li><a href="/" class="text-white text-xl font-bold">{"Strona Główna"}</a></li>
+            <li><a href="/products" class="text-white text-xl font-bold">{"Produkty"}</a></li>
+            <li><a href="/about-us" class="text-white text-xl font-bold">{"O Nas"}</a></li>
+            <li><a href="/contact" class="text-white text-xl font-bold">{"Kontakt"}</a></li>
+            </ul>
+            </div>
+
 
             // Mobile menu for small screens
             <input type="checkbox" id="menu-toggle" class="hidden" />
