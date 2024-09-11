@@ -1,5 +1,6 @@
 mod components;
 mod pages;
+mod views;
 
 use yew::prelude::*;
 use yew_router::prelude::*;
