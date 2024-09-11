@@ -1,3 +1,4 @@
+use gloo::console::log;
 use yew::prelude::*;
 
 #[function_component(NavBar)]
@@ -6,6 +7,7 @@ pub fn navbar() -> Html {
 
     let toggle_menu = {
         let menu_visible = menu_visible.clone();
+        log!("menu_visible: {:?}", *menu_visible);
         Callback::from(move |_| menu_visible.set(!*menu_visible))
     };
 
@@ -25,12 +27,19 @@ pub fn navbar() -> Html {
                     </label>
 
                     // Dropdown menu for mobile
-                    <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href="/" class="text-xl font-bold">{"Strona Główna"}</a></li>
-                        <li><a href="/products" class="text-xl font-bold">{"Produkty"}</a></li>
-                        <li><a href="/about-us" class="text-xl font-bold">{"O Nas"}</a></li>
-                        <li><a href="/contact" class="text-xl font-bold">{"Kontakt"}</a></li>
-                    </ul>
+                    {
+                        if *menu_visible {
+                            html! { <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="/" class="text-xl font-bold">{"Strona Główna"}</a></li>
+                            <li><a href="/products" class="text-xl font-bold">{"Produkty"}</a></li>
+                            <li><a href="/about-us" class="text-xl font-bold">{"O Nas"}</a></li>
+                            <li><a href="/contact" class="text-xl font-bold">{"Kontakt"}</a></li>
+                        </ul>}
+                        } else {
+                            html! {}
+                        }
+                    }
+
                 </div>
 
                 // Desktop menu items
