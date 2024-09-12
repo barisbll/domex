@@ -5,11 +5,11 @@ pub fn call_us() -> Html {
     html! {
         <div class="relative w-full h-screen px-5 flex flex-col justify-center gap-10  xl:gap-0 xl:justify-center xl:flex-row-reverse xl:px-40">
             // Container 1
-            <div class="flex justify-center items-center border-2">
+            <div class="flex justify-center items-center">
                 <img src="static/img/happy-construction-worker-removed-bg.png" alt="Happy Construction Worker" class="transform scale-125 -translate-x-[60px] md:scale-100 xl:scale-125" />
             </div>
             // Container 2
-            <div class="flex flex-col justify-center items-center xl:items-start xl:gap-4 border-2">
+            <div class="flex flex-col justify-center items-center xl:items-start xl:gap-4">
                 <h1 class="text-4xl xl:text-6xl font-bold text-center">{"Zadzwoń Teraz"}</h1>
                 <p class="text-center text-xl xl:text-start xl:text-3xl mt-4">{"Zadzwoń do nas, aby usunąć swoje drzwi lub dokonać naprawy!"}</p>
 
