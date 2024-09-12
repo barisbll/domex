@@ -58,10 +58,11 @@ pub fn write_us() -> Html {
     };
 
     html! {
-        <div class="relative w-full h-screen px-5 flex flex-col justify-center items-center">
-            <div class="card card-compact bg-base-100 w-full">
+        <div class="relative w-full h-screen px-5 flex flex-col justify-center items-center xl:flex-row xl:justify-center gap-6">
+            // Form card
+            <div class="card card-compact bg-base-100 w-full md:w-3/4 xl:w-1/3">
                 <div class="card-body">
-                    <h2 class="card-title text-3xl text-center text-primary">{"Napisz do nas"}</h2>
+                    <h2 class="card-title text-3xl text-center text-primary">{"Masz pytania? Napisz do nas!"}</h2>
                     <div class="form-control">
                         // Display validation error message if any
                         if !error.is_empty() {
@@ -127,7 +128,11 @@ pub fn write_us() -> Html {
                         <button class="btn btn-primary mt-8" onclick={onsubmit}>{"Wyślij"}</button>
                     </div>
                 </div>
+                </div>
+                // XL Text
+                <div class="hidden xl:flex xl:justify-center xl:items-center xl:w-1/3">
+                    <img src="static/img/email.webp" alt="Email Writing Person" class="w-3/4 brightness-75 " />
+                </div>
             </div>
-        </div>
     }
 }
