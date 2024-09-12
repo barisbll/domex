@@ -3,14 +3,14 @@ use yew::prelude::*;
 #[function_component(CallUs)]
 pub fn call_us() -> Html {
     html! {
-        <div class="relative flex flex-col xl:flex-row-reverse w-full h-screen px-5 xl:px-10">
+        <div class="relative w-full h-screen px-5 flex flex-col justify-center gap-10  xl:gap-0 xl:justify-center xl:flex-row-reverse xl:px-40">
             // Container 1
-            <div class="flex flex-1 justify-center items-center">
-                <img src="static/img/happy-construction-worker-removed-bg.png" alt="Happy Construction Worker" class="transform scale-125 -translate-x-[60px] xl:-translate-x-[120px]  xl:scale-125" />
+            <div class="flex justify-center items-center border-2">
+                <img src="static/img/happy-construction-worker-removed-bg.png" alt="Happy Construction Worker" class="transform scale-125 -translate-x-[60px] md:scale-100 xl:scale-125" />
             </div>
             // Container 2
-            <div class="flex flex-1 flex-col justify-center items-center xl:items-start">
-                <h1 class="text-4xl xl:text-6xl font-bold text-center">{"Teraz Zadzwoń!"}</h1>
+            <div class="flex flex-col justify-center items-center xl:items-start xl:gap-4 border-2">
+                <h1 class="text-4xl xl:text-6xl font-bold text-center">{"Zadzwoń Teraz"}</h1>
                 <p class="text-center text-xl xl:text-start xl:text-3xl mt-4">{"Zadzwoń do nas, aby usunąć swoje drzwi lub dokonać naprawy!"}</p>
 
                 <div class="flex items-center mt-4 gap-4">
