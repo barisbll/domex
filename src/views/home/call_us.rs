@@ -20,8 +20,8 @@ pub fn call_us() -> Html {
                     </svg>
 
                     // Clickable phone number
-                    <a href="tel:+48123456789" class="text-blue-500 hover:text-blue-700 text-xl xl:text-3xl font-semibold">
-                        {"+48 123 456 789"}
+                    <a href="tel:+48 664 738 745" class="text-primary hover:text-blue-700 text-xl xl:text-3xl font-semibold">
+                        {"+48 664 738 745"}
                     </a>
                 </div>
             </div>
