@@ -12,7 +12,7 @@ pub fn navbar() -> Html {
     };
 
     html! {
-        <nav class="navbar bg-base-100 w-full py-4 bg-transparent sticky top-0 z-[10]">
+        <nav class="navbar bg-base-100 w-full py-4 bg-transparent sticky top-0 z-[50]">
             <div class="navbar-start pl-8">
                 <a href="/" class="btn btn-ghost text-2xl text-base-content">{"DOMEX"}</a>
             </div>
