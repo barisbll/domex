@@ -1,4 +1,3 @@
-use gloo::console::log;
 use yew::prelude::*;
 
 #[function_component(NavBar)]
@@ -7,7 +6,6 @@ pub fn navbar() -> Html {
 
     let toggle_menu = {
         let menu_visible = menu_visible.clone();
-        log!("menu_visible: {:?}", *menu_visible);
         Callback::from(move |_| menu_visible.set(!*menu_visible))
     };
 

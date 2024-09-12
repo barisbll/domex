@@ -3,7 +3,7 @@ use yew::prelude::*;
 #[function_component(CallUs)]
 pub fn call_us() -> Html {
     html! {
-        <div class="relative w-full h-screen px-5 flex flex-col justify-center gap-10  xl:gap-0 xl:justify-center xl:flex-row-reverse xl:px-40">
+        <div class="relative w-full mt-32 mb-8 px-5 flex flex-col justify-center gap-10  xl:gap-0 xl:justify-center xl:flex-row-reverse xl:px-40">
             // Container 1
             <div class="flex justify-center items-center">
                 <img src="static/img/happy-construction-worker-removed-bg.png" alt="Happy Construction Worker" class="transform scale-125 -translate-x-[60px] md:scale-100 xl:scale-125" />

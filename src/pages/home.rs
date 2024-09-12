@@ -1,6 +1,8 @@
 use yew::prelude::*;
 
+use crate::components::footer::Footer;
 use crate::components::navbar::NavBar;
+
 use crate::views::home::call_us::CallUs;
 use crate::views::home::header::Header;
 use crate::views::home::write_us::WriteUs;
@@ -13,6 +15,7 @@ pub fn home() -> Html {
             <Header />
             <CallUs />
             <WriteUs />
+            <Footer />
         </div>
     }
 }
