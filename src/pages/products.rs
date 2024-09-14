@@ -20,7 +20,7 @@ pub fn products() -> Html {
                     // Loop through the products and render each product as a tile
                     {for LIST_OF_PRODUCTS.iter().map(|product| html! {
                         <div class="card  shadow-lg hover:shadow-xl bg-base-100 transition rounded-lg text-center">
-                            <a href={product.href} target="_blank">
+                            <a href={product.href}>
                                 <div class="p-4">
                                     <img class="w-full h-48 object-contain mx-auto" src={product.img_src} alt={product.name} />
                                 </div>
