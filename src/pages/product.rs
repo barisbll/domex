@@ -1,6 +1,19 @@
 use crate::components::navbar::NavBar;
 use crate::data::list_of_products::LIST_OF_PRODUCTS;
+use gloo::console::log;
+use serde::{Deserialize, Serialize};
 use yew::prelude::*;
+
+fn extract_base_url(text: String) -> String {
+    // Split the input URL by `/` and collect the parts into a vector
+    let mut parts: Vec<&str> = text.split('/').collect();
+
+    // Remove the last part, which is typically a file or resource
+    parts.pop(); // We're safe here because URLs always have at least one part
+
+    // Add a trailing `/` to the base URL
+    format!("{}/", parts.join("/"))
+}
 
 #[derive(Properties, PartialEq)]
 pub struct Props {
@@ -39,11 +52,24 @@ pub fn product(props: &Props) -> Html {
             ("Wiśnia", "wisnia"),
         ];
 
+        let cloned_product = product.clone();
         // Extract the base name from the product's base_name
-        let base_name = product.base_name;
+        let base_name = product.base_name.clone();
 
         // Base URL for images
-        let base_url = "https://sendeckidrzwi.pl/wp-content/uploads/2015/10/";
+        // extract the base url from the img_url
+        let img_url = product.img_src.clone();
+
+        log!(
+            "my obj is ",
+            serde_json::to_string_pretty(&cloned_product).unwrap()
+        );
+
+        let base_url = extract_base_url(img_url.to_string().clone());
+        log!(
+            "my base url ",
+            serde_json::to_string_pretty(&base_url).unwrap()
+        );
 
         // Generate the list of images
         variants

@@ -1,3 +1,6 @@
+use serde::{Deserialize, Serialize};
+
+#[derive(Serialize, Deserialize, Clone)]
 pub struct Product {
     pub name: &'static str,
     pub base_name: &'static str, // Added this field
