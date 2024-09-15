@@ -1,6 +1,6 @@
+use crate::components::footer::Footer;
 use crate::components::navbar::NavBar;
 use crate::data::list_of_products::LIST_OF_PRODUCTS;
-use gloo::console::log;
 use yew::prelude::*;
 
 fn extract_base_url(text: String) -> String {
@@ -25,8 +25,6 @@ struct ProductImage {
 pub fn product(props: &Props) -> Html {
     let product_href = format!("/products/{}/", props.id);
     let product = LIST_OF_PRODUCTS.iter().find(|&p| p.href == product_href);
-    // TODO
-    // let selected_image = use_state(|| "".to_string());
 
     let images: Option<Vec<ProductImage>> = product.map(|product| {
         let variants = vec![
@@ -67,18 +65,18 @@ pub fn product(props: &Props) -> Html {
     let selected_image = use_state(|| images.as_ref().unwrap()[0].big_image_url.clone());
 
     html! {
-        <div class="min-h-screen bg-base-300">
+        <div class="min-h-screen lg:h-screen lg:flex lg:flex-col bg-base-300">
             <NavBar />
             {
                 if let Some(product) = product {
                     let images = images.unwrap();
 
                     html! {
-                        <div class="container mx-auto flex flex-col lg:flex-row mt-4">
-                            <div class="flex-1 flex justify-center items-center">
-                                <img src={(*selected_image).clone()} alt={product.name} class="max-h-screen" />
+                        <div class="container mx-auto flex flex-col lg:flex-row lg:justify-center lg:items-center lg:flex-1 mt-4 mb-12">
+                            <div class="flex-1 lg:flex-none flex justify-center items-center lg:w-1/3">
+                                <img src={(*selected_image).clone()} alt={product.name} class="max-h-screen md:w-1/3 lg:w-full" />
                             </div>
-                            <div class="w-full lg:w-1/4 flex flex-row lg:flex-col overflow-x-auto lg:overflow-y-auto space-x-2 lg:space-x-0 lg:space-y-2 p-2">
+                            <div class="w-full lg:w-1/3 md:mt-4 flex flex-row lg:grid lg:grid-cols-3 flex-wrap justify-center items-center content-start lg:content-center overflow-x-auto lg:overflow-y-auto space-x-2 lg:space-x-0 p-2">
                                 { for images.iter().map(|image| {
                                     let on_click = {
                                         let selected_image = selected_image.clone();
@@ -86,7 +84,7 @@ pub fn product(props: &Props) -> Html {
                                         Callback::from(move |_| selected_image.set(big_image_url.clone()))
                                     };
                                     html! {
-                                        <div onclick={on_click} class="cursor-pointer flex flex-col items-center">
+                                        <div onclick={on_click} class="cursor-pointer flex flex-col items-center w-1/4 md:w-1/5 lg:w-full xl:w-2/3 md:mt-4">
                                             <img src={image.small_image_url.clone()} alt={image.display_name.clone()} class="w-24 h-auto lg:w-full" />
                                             <p class="text-center mt-1 text-sm">{ image.display_name.clone() }</p>
                                         </div>
@@ -103,6 +101,7 @@ pub fn product(props: &Props) -> Html {
                     }
                 }
             }
+            <Footer />
         </div>
     }
 }
