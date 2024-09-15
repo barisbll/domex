@@ -1,17 +1,12 @@
 use crate::components::navbar::NavBar;
 use crate::data::list_of_products::LIST_OF_PRODUCTS;
 use gloo::console::log;
-use serde::{Deserialize, Serialize};
 use yew::prelude::*;
 
 fn extract_base_url(text: String) -> String {
-    // Split the input URL by `/` and collect the parts into a vector
     let mut parts: Vec<&str> = text.split('/').collect();
+    parts.pop();
 
-    // Remove the last part, which is typically a file or resource
-    parts.pop(); // We're safe here because URLs always have at least one part
-
-    // Add a trailing `/` to the base URL
     format!("{}/", parts.join("/"))
 }
 
@@ -20,27 +15,20 @@ pub struct Props {
     pub id: String,
 }
 
+struct ProductImage {
+    display_name: String,
+    small_image_url: String,
+    big_image_url: String,
+}
+
 #[function_component(Product)]
 pub fn product(props: &Props) -> Html {
-    // Construct the product href using the id from props
     let product_href = format!("/products/{}/", props.id);
-
-    // Find the product in the list where the href matches
     let product = LIST_OF_PRODUCTS.iter().find(|&p| p.href == product_href);
+    // TODO
+    // let selected_image = use_state(|| "".to_string());
 
-    // Define selected_image state
-    let selected_image = use_state(|| "".to_string());
-
-    // Struct to hold image data
-    struct ProductImage {
-        display_name: String,
-        small_image_url: String,
-        big_image_url: String,
-    }
-
-    // Define images as an Option<Vec<ProductImage>>
     let images: Option<Vec<ProductImage>> = product.map(|product| {
-        // Define the variants and their display names
         let variants = vec![
             ("Biały", ""),
             ("Dąb Złoty", "dabzloty"),
@@ -52,26 +40,8 @@ pub fn product(props: &Props) -> Html {
             ("Wiśnia", "wisnia"),
         ];
 
-        let cloned_product = product.clone();
-        // Extract the base name from the product's base_name
-        let base_name = product.base_name.clone();
+        let base_url = extract_base_url(product.img_src.to_string().clone());
 
-        // Base URL for images
-        // extract the base url from the img_url
-        let img_url = product.img_src.clone();
-
-        log!(
-            "my obj is ",
-            serde_json::to_string_pretty(&cloned_product).unwrap()
-        );
-
-        let base_url = extract_base_url(img_url.to_string().clone());
-        log!(
-            "my base url ",
-            serde_json::to_string_pretty(&base_url).unwrap()
-        );
-
-        // Generate the list of images
         variants
             .iter()
             .map(|(display_name, type_suffix)| {
@@ -80,8 +50,10 @@ pub fn product(props: &Props) -> Html {
                 } else {
                     format!("-{}", type_suffix)
                 };
-                let small_image_url = format!("{}{}{}-200x418.png", base_url, base_name, suffix);
-                let big_image_url = format!("{}{}{}-431x900.png", base_url, base_name, suffix);
+                let small_image_url =
+                    format!("{}{}{}-200x418.png", base_url, product.base_name, suffix);
+                let big_image_url =
+                    format!("{}{}{}-431x900.png", base_url, product.base_name, suffix);
 
                 ProductImage {
                     display_name: display_name.to_string(),
@@ -92,14 +64,7 @@ pub fn product(props: &Props) -> Html {
             .collect()
     });
 
-    // Use an effect to set selected_image when images change
-    // {
-    //     let selected_image = selected_image.clone();
-    //     if let Some(images) = &images {
-    //         let first_image_url = images[0].big_image_url.clone();
-    //         selected_image.set(first_image_url);
-    //     }
-    // }
+    let selected_image = use_state(|| images.as_ref().unwrap()[0].big_image_url.clone());
 
     html! {
         <div class="min-h-screen bg-base-300">
