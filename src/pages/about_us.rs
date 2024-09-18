@@ -9,7 +9,7 @@ pub fn about_us() -> Html {
             <NavBar />
 
             <header class="text-center py-4 text-white">
-                <h1 class="text-3xl font-bold text-base-content">{"Kto Jesteśmy?"}</h1>
+                <h1 class="text-3xl font-bold text-base-content">{"Kim Jesteśmy?"}</h1>
             </header>
 
             <div class="container mx-auto px-4 py-8">
@@ -18,7 +18,7 @@ pub fn about_us() -> Html {
                     // Image section
                     <div class="w-full">
                         <img
-                            src="https://via.placeholder.com/400"
+                            src="static/img/robert.jpeg"
                             alt="About us image"
                             class="rounded-lg shadow-lg w-full h-auto object-cover"
                         />
