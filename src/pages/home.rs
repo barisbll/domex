@@ -13,8 +13,11 @@ pub fn home() -> Html {
         <div>
             <NavBar />
             <Header />
+            <div class="my-20"></div>
             <CallUs />
+            <div class="my-16"></div>
             <WriteUs />
+            <div class="my-16"></div>
             <Footer />
         </div>
     }

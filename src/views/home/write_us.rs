@@ -58,7 +58,7 @@ pub fn write_us() -> Html {
     };
 
     html! {
-        <div class="relative w-full h-screen px-5 flex flex-col justify-center items-center xl:flex-row xl:justify-center gap-6">
+        <div class="relative w-full px-5 flex flex-col justify-center items-center xl:flex-row xl:justify-center gap-6">
             // Form card
             <div class="card card-compact bg-base-100 w-full md:w-3/4 xl:w-1/3">
                 <div class="card-body">
