@@ -10,7 +10,6 @@ pub fn products() -> Html {
     html! {
         <div class="min-h-screen bg-base-300">
         <NavBar />
-            // Navbar component can go here
             <header class="text-center py-4 text-white">
                 <h1 class="text-3xl font-bold text-base-content">{"Nasze Produkty"}</h1>
             </header>

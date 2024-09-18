@@ -31,6 +31,7 @@ pub fn navbar() -> Html {
                             <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><a href="/" class="text-xl font-bold text-base-content">{"Strona Główna"}</a></li>
                                 <li><a href="/products" class="text-xl font-bold text-base-content">{"Produkty"}</a></li>
+                                <li><a href="/installations" class="text-xl font-bold text-base-content">{"Realizacja"}</a></li>
                                 <li><a href="/about-us" class="text-xl font-bold text-base-content">{"O Nas"}</a></li>
                                 <li><a href="/contact" class="text-xl font-bold text-base-content">{"Kontakt"}</a></li>
                             </ul>
@@ -46,6 +47,7 @@ pub fn navbar() -> Html {
                 <ul id="menu-items" class="hidden lg:flex lg:gap-5">
                 <li><a href="/" class="text-xl font-bold text-base-content">{"Strona Główna"}</a></li>
                 <li><a href="/products" class="text-xl font-bold text-base-content">{"Produkty"}</a></li>
+                <li><a href="/installations" class="text-xl font-bold text-base-content">{"Realizacja"}</a></li>
                 <li><a href="/about-us" class="text-xl font-bold text-base-content">{"O Nas"}</a></li>
                 <li><a href="/contact" class="text-xl font-bold text-base-content">{"Kontakt"}</a></li>
                 </ul>
