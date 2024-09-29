@@ -16,20 +16,20 @@ use pages::products::Products;
 
 #[derive(Clone, Routable, PartialEq)]
 enum Route {
-    #[at("/domex/")]
+    #[at("/")]
     Home,
-    #[at("/domex/products")]
+    #[at("/products")]
     Products,
-    #[at("/domex/installations")]
+    #[at("/installations")]
     Installations,
-    #[at("/domex/products/:id")]
+    #[at("/products/:id")]
     Product { id: String },
-    #[at("/domex/about-us")]
+    #[at("/about-us")]
     AboutUs,
-    #[at("/domex/contact")]
+    #[at("/contact")]
     Contact,
     #[not_found]
-    #[at("/domex/404")]
+    #[at("/404")]
     NotFound,
 }
 
