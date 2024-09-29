@@ -18,3 +18,14 @@ trunk serve
 ```sh
 npx tailwindcss -c ./tailwind.config.js -o ./tailwind.css --watch
 ```
+
+
+## How to Deploy to gh pages?
+
+In order to deploy to gh pages, first create a release
+
+```sh
+trunk build --release --public-url /domex/
+```
+
+Then copy the content of the /dist folder and add to the /docs folder
