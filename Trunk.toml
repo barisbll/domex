@@ -1,8 +1,3 @@
-# Trunk.toml
-[build]
-target = "wasm32-unknown-unknown"
-release = true
-
 [[copy]]
 src = "index.html"
 dest = "404.html"
