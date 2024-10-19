@@ -23,8 +23,9 @@ struct ProductImage {
 
 #[function_component(Product)]
 pub fn product(props: &Props) -> Html {
-    let product_href = format!("/products/{}/", props.id);
-    let product = LIST_OF_PRODUCTS.iter().find(|&p| p.href == product_href);
+    let product = LIST_OF_PRODUCTS
+        .iter()
+        .find(|&p| p.href == props.id.clone());
 
     let images: Option<Vec<ProductImage>> = product.map(|product| {
         let variants = vec![

@@ -1,4 +1,7 @@
 use yew::prelude::*;
+use yew_router::prelude::Link;
+
+use crate::Route;
 
 #[function_component(Footer)]
 pub fn footer() -> Html {
@@ -19,29 +22,18 @@ pub fn footer() -> Html {
                 <p>
                 {"DOMEX"}
                 <br />
-                {"The door to your future"}
+                {"Drzwi do Twojej przyszłości"}
                 </p>
       </aside>
       <nav>
-            <h6 class="footer-title">{"Services"}</h6>
-            <a class="link link-hover">{"Branding"}</a>
-            <a class="link link-hover">{"Design"}</a>
-            <a class="link link-hover">{"Marketing"}</a>
-            <a class="link link-hover">{"Advertisement"}</a>
+            <h6 class="footer-title">{"Firma"}</h6>
+            <p><Link<Route> to={Route::Home} classes="link link-hover">{"Strona Główna"}</Link<Route>></p>
+            <p><Link<Route> to={Route::Products} classes="link link-hover">{"Produkty"}</Link<Route>></p>
+            <p><Link<Route> to={Route::Installations} classes="link link-hover">{"Realizacja"}</Link<Route>></p>
+            <p><Link<Route> to={Route::AboutUs} classes="link link-hover">{"O Nas"}</Link<Route>></p>
+            <p><Link<Route> to={Route::Contact} classes="link link-hover">{"Kontakt"}</Link<Route>></p>
       </nav>
-      <nav>
-            <h6 class="footer-title">{"Company"}</h6>
-            <a class="link link-hover">{"About us"}</a>
-            <a class="link link-hover">{"Contact"}</a>
-            <a class="link link-hover">{"Jobs"}</a>
-            <a class="link link-hover">{"Press kit"}</a>
-      </nav>
-      <nav>
-            <h6 class="footer-title">{"Legal"}</h6>
-            <a class="link link-hover">{"Terms of use"}</a>
-            <a class="link link-hover">{"Privacy policy"}</a>
-            <a class="link link-hover">{"Cookie policy"}</a>
-      </nav>
+
     </footer>
         }
 }
