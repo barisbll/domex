@@ -25,7 +25,7 @@ npx tailwindcss -c ./tailwind.config.js -o ./tailwind.css --watch
 In order to deploy to gh pages, first create a release
 
 ```sh
-trunk build --release --public-url /domex/
+trunk build --release --public-url /
 ```
 
 Then copy the content of the /dist folder and add to the /docs folder
