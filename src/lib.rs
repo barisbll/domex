@@ -9,21 +9,21 @@ use yew_router::prelude::*;
 use pages::about_us::AboutUs;
 use pages::contact::Contact;
 use pages::home::Home;
+use pages::inside_door::InsideDoor;
+use pages::inside_doors::InsideDoors;
 use pages::installations::Installations;
 use pages::not_found::NotFound;
-use pages::product::Product;
-use pages::products::Products;
 
 #[derive(Clone, Routable, PartialEq)]
 enum Route {
     #[at("/")]
     Home,
-    #[at("/products")]
-    Products,
+    #[at("/inside-doors")]
+    InsideDoors,
     #[at("/installations")]
     Installations,
-    #[at("/products/:id")]
-    Product { id: String },
+    #[at("/inside-doors/:id")]
+    InsideDoor { id: String },
     #[at("/about-us")]
     AboutUs,
     #[at("/contact")]
@@ -36,9 +36,9 @@ enum Route {
 fn switch(routes: Route) -> Html {
     match routes {
         Route::Home => html! { <Home /> },
-        Route::Products => html! { <Products /> },
+        Route::InsideDoors => html! { <InsideDoors /> },
         Route::Installations => html! { <Installations /> },
-        Route::Product { id } => html! { <Product id={id} /> },
+        Route::InsideDoor { id } => html! { <InsideDoor id={id} /> },
         Route::AboutUs => html! { <AboutUs /> },
         Route::Contact => html! { <Contact /> },
         Route::NotFound => html! { <NotFound /> },

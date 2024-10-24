@@ -21,8 +21,8 @@ struct ProductImage {
     big_image_url: String,
 }
 
-#[function_component(Product)]
-pub fn product(props: &Props) -> Html {
+#[function_component(InsideDoor)]
+pub fn inside_door(props: &Props) -> Html {
     let product = LIST_OF_OUTSIDE_DOORS
         .iter()
         .find(|&p| p.href == props.id.clone());

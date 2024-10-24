@@ -5,8 +5,8 @@ use crate::Route;
 use yew::prelude::*;
 use yew_router::prelude::*; // Import your AppRoute enum
 
-#[function_component(Products)]
-pub fn products() -> Html {
+#[function_component(InsideDoors)]
+pub fn inside_doors() -> Html {
     html! {
         <div class="min-h-screen bg-base-300">
             <NavBar />
@@ -20,12 +20,12 @@ pub fn products() -> Html {
                     {for LIST_OF_OUTSIDE_DOORS.iter().map(|product| html! {
                         <div class="card shadow-lg hover:shadow-xl bg-base-100 transition rounded-lg text-center">
                             // Use Link from yew_router for client-side routing
-                            <Link<Route> to={Route::Product { id: product.href.to_string() }} classes="no-underline">
+                            <Link<Route> to={Route::InsideDoor { id: product.href.to_string() }} classes="no-underline">
                                 <div class="p-4">
                                     <img class="w-full h-48 object-contain mx-auto" src={product.img_src} alt={product.name} />
                                 </div>
                                 <div class="p-4">
-                                    <h2 class="text-lg font-bold text-base-content">{product.name.clone()}</h2>
+                                    <h2 class="text-lg font-bold text-base-content">{product.name}</h2>
                                 </div>
                             </Link<Route>>
                         </div>

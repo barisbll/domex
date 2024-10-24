@@ -28,7 +28,7 @@ pub fn footer() -> Html {
       <nav>
             <h6 class="footer-title">{"Firma"}</h6>
             <p><Link<Route> to={Route::Home} classes="link link-hover">{"Strona Główna"}</Link<Route>></p>
-            <p><Link<Route> to={Route::Products} classes="link link-hover">{"Produkty"}</Link<Route>></p>
+            <p><Link<Route> to={Route::InsideDoors} classes="link link-hover">{"Drzwi Wewnątrzklatkowe"}</Link<Route>></p>
             <p><Link<Route> to={Route::Installations} classes="link link-hover">{"Realizacja"}</Link<Route>></p>
             <p><Link<Route> to={Route::AboutUs} classes="link link-hover">{"O Nas"}</Link<Route>></p>
             <p><Link<Route> to={Route::Contact} classes="link link-hover">{"Kontakt"}</Link<Route>></p>
