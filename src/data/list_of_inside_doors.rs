@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 #[derive(Serialize, Deserialize, Clone)]
 pub struct Product {
     pub name: &'static str,
-    pub base_name: &'static str, // Added this field
+    pub base_name: &'static str,
     pub img_src: &'static str,
     pub href: &'static str,
     pub original_href: &'static str,

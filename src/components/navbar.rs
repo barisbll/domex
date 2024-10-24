@@ -34,6 +34,7 @@ pub fn navbar() -> Html {
                             <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><Link<Route> to={Route::Home} classes="text-xl font-bold text-base-content">{"Strona Główna"}</Link<Route>></li>
                                 <li><Link<Route> to={Route::InsideDoors} classes="text-xl font-bold text-base-content">{"Drzwi Wewnątrzklatkowe"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::RoomDoors} classes="text-xl font-bold text-base-content">{"Drzwi Pokojowe"}</Link<Route>></li>
                                 <li><Link<Route> to={Route::Installations} classes="text-xl font-bold text-base-content">{"Realizacja"}</Link<Route>></li>
                                 <li><Link<Route> to={Route::AboutUs} classes="text-xl font-bold text-base-content">{"O Nas"}</Link<Route>></li>
                                 <li><Link<Route> to={Route::Contact} classes="text-xl font-bold text-base-content">{"Kontakt"}</Link<Route>></li>
@@ -49,6 +50,7 @@ pub fn navbar() -> Html {
                 <ul id="menu-items" class="hidden lg:flex lg:gap-5">
                     <li><Link<Route> to={Route::Home} classes="text-xl font-bold text-base-content">{"Strona Główna"}</Link<Route>></li>
                     <li><Link<Route> to={Route::InsideDoors} classes="text-xl font-bold text-base-content">{"Drzwi Wewnątrzklatkowe"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::RoomDoors} classes="text-xl font-bold text-base-content">{"Drzwi Pokojowe"}</Link<Route>></li>
                     <li><Link<Route> to={Route::Installations} classes="text-xl font-bold text-base-content">{"Realizacja"}</Link<Route>></li>
                     <li><Link<Route> to={Route::AboutUs} classes="text-xl font-bold text-base-content">{"O Nas"}</Link<Route>></li>
                     <li><Link<Route> to={Route::Contact} classes="text-xl font-bold text-base-content">{"Kontakt"}</Link<Route>></li>
