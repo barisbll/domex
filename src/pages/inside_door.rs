@@ -1,6 +1,6 @@
 use crate::components::footer::Footer;
 use crate::components::navbar::NavBar;
-use crate::data::list_of_outside_doors::LIST_OF_OUTSIDE_DOORS;
+use crate::data::list_of_inside_doors::LIST_OF_INSIDE_DOORS;
 use yew::prelude::*;
 
 fn extract_base_url(text: String) -> String {
@@ -23,7 +23,7 @@ struct ProductImage {
 
 #[function_component(InsideDoor)]
 pub fn inside_door(props: &Props) -> Html {
-    let product = LIST_OF_OUTSIDE_DOORS
+    let product = LIST_OF_INSIDE_DOORS
         .iter()
         .find(|&p| p.href == props.id.clone());
 

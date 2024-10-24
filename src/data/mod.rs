@@ -1,1 +1,1 @@
-pub mod list_of_outside_doors;
+pub mod list_of_inside_doors;
