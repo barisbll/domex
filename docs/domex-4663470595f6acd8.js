@@ -907,16 +907,16 @@ function __wbg_get_imports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper2482 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 1254, __wbg_adapter_42);
+    imports.wbg.__wbindgen_closure_wrapper2523 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 1286, __wbg_adapter_42);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper2675 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 1331, __wbg_adapter_45);
+    imports.wbg.__wbindgen_closure_wrapper2716 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 1363, __wbg_adapter_45);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper2705 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 1342, __wbg_adapter_48);
+    imports.wbg.__wbindgen_closure_wrapper2746 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 1374, __wbg_adapter_48);
         return addHeapObject(ret);
     };
 
