@@ -6,7 +6,7 @@ pub struct RoomDoor {
     pub img_src: &'static str,
 }
 
-pub const LIST_OF_INSIDE_DOORS: &[RoomDoor] = &[
+pub const LIST_OF_ROOM_DOORS: &[RoomDoor] = &[
     RoomDoor {
         img_src: "static/img/list_of_room_doors/MODERN-07-ORZECH-287x600-1.jpg",
         name: "MODERN 07 ORZECH",

@@ -1,5 +1,5 @@
 use crate::components::{footer::Footer, navbar::NavBar};
-use crate::data::list_of_room_doors::LIST_OF_INSIDE_DOORS;
+use crate::data::list_of_room_doors::LIST_OF_ROOM_DOORS;
 use yew::prelude::*; // Ensure the path is correct to where your list is defined.
 
 #[function_component(RoomDoors)]
@@ -12,7 +12,7 @@ pub fn room_doors() -> Html {
             </header>
             <div class="container mx-auto px-4 py-8">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {for LIST_OF_INSIDE_DOORS.iter().map(|door| html! {
+                    {for LIST_OF_ROOM_DOORS.iter().map(|door| html! {
                         <div class="card shadow-lg hover:shadow-xl bg-base-100 transition rounded-lg text-center">
                             <a href={door.img_src}>
                                 <div class="p-4">
