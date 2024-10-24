@@ -1,6 +1,6 @@
 use crate::components::footer::Footer;
 use crate::components::navbar::NavBar;
-use crate::data::list_of_products::LIST_OF_PRODUCTS;
+use crate::data::list_of_outside_doors::LIST_OF_OUTSIDE_DOORS;
 use crate::Route;
 use yew::prelude::*;
 use yew_router::prelude::*; // Import your AppRoute enum
@@ -17,7 +17,7 @@ pub fn products() -> Html {
             <div class="container mx-auto px-4 py-8">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     // Loop through the products and render each product as a tile
-                    {for LIST_OF_PRODUCTS.iter().map(|product| html! {
+                    {for LIST_OF_OUTSIDE_DOORS.iter().map(|product| html! {
                         <div class="card shadow-lg hover:shadow-xl bg-base-100 transition rounded-lg text-center">
                             // Use Link from yew_router for client-side routing
                             <Link<Route> to={Route::Product { id: product.href.to_string() }} classes="no-underline">

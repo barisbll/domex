@@ -9,7 +9,7 @@ pub struct Product {
     pub original_href: &'static str,
 }
 
-pub const LIST_OF_PRODUCTS: &[Product] = &[
+pub const LIST_OF_OUTSIDE_DOORS: &[Product] = &[
     Product {
         name: "Arches",
         base_name: "Arches",
