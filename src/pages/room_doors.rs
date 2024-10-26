@@ -20,13 +20,17 @@ pub fn room_doors() -> Html {
                     <p class="text-sm text-base-content">{"Misją Domex jest dostarczanie drzwi najwyższej jakości oraz kompleksowa obsługa naszych klientów. Dbamy o to, aby każda decyzja o zakupie drzwi pokojowych była dla Ciebie pewna i komfortowa. Oferujemy także profesjonalny montaż, a nasz zespół fachowców jest gotów sprostać nawet najbardziej wymagającym oczekiwaniom."}</p>
                 </div>
             </section>
-
-
-
-
-            <a href="static/pdf/Artus-Katalog-2023-2024-ISOCoated_v2_300-18-08-2023-strona-po-stronie.pdf" target="_blank" rel="noopener noreferrer" class="text-white underline">
-                    {"Otwórz katalog (Link)"}
-                </a>
+            <section class="flex flex-col md:flex-row gap-8 justify-center  items-center md:items-center md:justify-start pt-8 md:pt-16">
+                <div class="md:w-1/2">
+                    <img src="static/img/catalogues/artus-catalogue.png" alt="Drzwi pokojowe katalog" class="rounded-lg shadow-lg" />
+                </div>
+                <div class="md:w-1/2 flex flex-col justify-center items-center md:items-start gap-2">
+                    <h2 class="text-xl md:text-2xl font-bold text-base-content py-2">{"Katalog drzwi firmy Artus"}</h2>
+                        <a href="static/pdf/artus-catalogue.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        {"Otwórz katalog"}
+                        </a>
+                </div>
+            </section>
             </div>
             <Footer />
         </div>
