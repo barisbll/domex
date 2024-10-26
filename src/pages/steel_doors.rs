@@ -2,7 +2,7 @@ use crate::components::{footer::Footer, navbar::NavBar};
 use crate::data::list_of_metal_doors::LIST_OF_METAL_DOORS;
 use yew::prelude::*;
 
-#[function_component(MetalDoors)]
+#[function_component(SteelDoors)]
 pub fn metal_doors() -> Html {
     html! {
         <div class="min-h-screen bg-base-300">

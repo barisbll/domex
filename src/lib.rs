@@ -12,9 +12,9 @@ use pages::home::Home;
 use pages::inside_door::InsideDoor;
 use pages::inside_doors::InsideDoors;
 use pages::installations::Installations;
-use pages::metal_doors::MetalDoors;
 use pages::not_found::NotFound;
 use pages::room_doors::RoomDoors;
+use pages::steel_doors::SteelDoors;
 
 #[derive(Clone, Routable, PartialEq)]
 enum Route {
@@ -28,8 +28,8 @@ enum Route {
     InsideDoor { id: String },
     #[at("/room-doors")]
     RoomDoors,
-    #[at("/metal-doors")]
-    MetalDoors,
+    #[at("/steel-doors")]
+    SteelDoors,
     #[at("/about-us")]
     AboutUs,
     #[at("/contact")]
@@ -44,7 +44,7 @@ fn switch(routes: Route) -> Html {
         Route::Home => html! { <Home /> },
         Route::InsideDoors => html! { <InsideDoors /> },
         Route::RoomDoors => html! { <RoomDoors /> },
-        Route::MetalDoors => html! { <MetalDoors /> },
+        Route::SteelDoors => html! { <SteelDoors /> },
         Route::Installations => html! { <Installations /> },
         Route::InsideDoor { id } => html! { <InsideDoor id={id} /> },
         Route::AboutUs => html! { <AboutUs /> },
