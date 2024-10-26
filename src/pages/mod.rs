@@ -6,4 +6,5 @@ pub mod inside_doors;
 pub mod installations;
 pub mod not_found;
 pub mod room_doors;
+pub mod stal_doors;
 pub mod steel_doors;

@@ -36,6 +36,7 @@ pub fn navbar() -> Html {
                                 <li><Link<Route> to={Route::InsideDoors} classes="text-lg font-bold text-base-content">{"Drzwi Wewnątrzklatkowe"}</Link<Route>></li>
                                 <li><Link<Route> to={Route::RoomDoors} classes="text-lg font-bold text-base-content">{"Drzwi Pokojowe"}</Link<Route>></li>
                                 <li><Link<Route> to={Route::SteelDoors} classes="text-lg font-bold text-base-content">{"Drzwi Stalowe"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::StalDoors} classes="text-lg font-bold text-base-content">{"Drzwi z Listwą"}</Link<Route>></li>
                                 <li><Link<Route> to={Route::Installations} classes="text-lg font-bold text-base-content">{"Realizacja"}</Link<Route>></li>
                                 <li><Link<Route> to={Route::AboutUs} classes="text-lg font-bold text-base-content">{"O Nas"}</Link<Route>></li>
                                 <li><Link<Route> to={Route::Contact} classes="text-lg font-bold text-base-content">{"Kontakt"}</Link<Route>></li>
@@ -53,6 +54,7 @@ pub fn navbar() -> Html {
                     <li><Link<Route> to={Route::InsideDoors} classes="text-lg font-bold text-base-content">{"Drzwi Wewnątrzklatkowe"}</Link<Route>></li>
                     <li><Link<Route> to={Route::RoomDoors} classes="text-lg font-bold text-base-content">{"Drzwi Pokojowe"}</Link<Route>></li>
                     <li><Link<Route> to={Route::SteelDoors} classes="text-lg font-bold text-base-content">{"Drzwi Stalowe"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::StalDoors} classes="text-lg font-bold text-base-content">{"Drzwi z Listwą"}</Link<Route>></li>
                     <li><Link<Route> to={Route::Installations} classes="text-lg font-bold text-base-content">{"Realizacja"}</Link<Route>></li>
                     <li><Link<Route> to={Route::AboutUs} classes="text-lg font-bold text-base-content">{"O Nas"}</Link<Route>></li>
                     <li><Link<Route> to={Route::Contact} classes="text-lg font-bold text-base-content">{"Kontakt"}</Link<Route>></li>

@@ -14,6 +14,7 @@ use pages::inside_doors::InsideDoors;
 use pages::installations::Installations;
 use pages::not_found::NotFound;
 use pages::room_doors::RoomDoors;
+use pages::stal_doors::StalDoors;
 use pages::steel_doors::SteelDoors;
 
 #[derive(Clone, Routable, PartialEq)]
@@ -30,6 +31,8 @@ enum Route {
     RoomDoors,
     #[at("/steel-doors")]
     SteelDoors,
+    #[at("/stal-doors")]
+    StalDoors,
     #[at("/about-us")]
     AboutUs,
     #[at("/contact")]
@@ -45,6 +48,7 @@ fn switch(routes: Route) -> Html {
         Route::InsideDoors => html! { <InsideDoors /> },
         Route::RoomDoors => html! { <RoomDoors /> },
         Route::SteelDoors => html! { <SteelDoors /> },
+        Route::StalDoors => html! { <StalDoors /> },
         Route::Installations => html! { <Installations /> },
         Route::InsideDoor { id } => html! { <InsideDoor id={id} /> },
         Route::AboutUs => html! { <AboutUs /> },
