@@ -27,7 +27,7 @@ pub fn steel_doors() -> Html {
                 </div>
                 <div class="md:w-1/2 flex flex-col justify-center items-center md:items-start gap-2">
                     <h2 class="text-xl md:text-2xl font-bold text-base-content py-2">{"Katalog drzwi firmy Stalprodukt"}</h2>
-                        <a href="static/pdf/stalproduckt-catalogue.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <a href="static/pdf/stalprodukt-catalogue.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                         {"Otwórz katalog"}
                         </a>
                 </div>

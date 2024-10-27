@@ -15,7 +15,9 @@ pub fn navbar() -> Html {
         <nav class="navbar bg-base-100 w-full py-4 sticky top-0 z-[50]">
             <div class="navbar-start pl-8">
                 // Using Link from yew_router instead of <a> for client-side navigation
-                <Link<Route> to={Route::Home} classes="btn btn-ghost text-2xl text-base-content">{"DOMEX"}</Link<Route>>
+                <Link<Route> to={Route::Home} classes="btn btn-ghost text-2xl text-base-content">
+                    <img src="/static/img/domex.png" alt="Logo" class="" />
+                </Link<Route>>
             </div>
 
             <div class="navbar-end pr-8">
