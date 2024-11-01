@@ -40,7 +40,7 @@ pub fn write_us() -> Html {
 
             // Construct the mailto link if validation passes
             let mailto = format!(
-                "mailto:support@example.com?subject={}&body={}%0A%0A%0A%0AImię:%20{}%0AEmail:%20{}%0A",
+                "mailto:robert-kiscinski@wp.pl?subject={}&body={}%0A%0A%0A%0AImię:%20{}%0AEmail:%20{}%0A",
                 *title, *message, *name, *email
             );
 

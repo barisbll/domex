@@ -15,9 +15,7 @@ pub fn navbar() -> Html {
         <nav class="navbar bg-base-100 w-full py-4 sticky top-0 z-[50]">
             <div class="navbar-start pl-8">
                 // Using Link from yew_router instead of <a> for client-side navigation
-                <Link<Route> to={Route::Home} classes="pointer">
-                    <img src="/static/img/domex.png" alt="Logo"/>
-                </Link<Route>>
+                <Link<Route> to={Route::Home} classes="btn btn-ghost text-2xl text-base-content">{"DOMEX"}</Link<Route>>
             </div>
 
             <div class="navbar-end pr-8">
@@ -34,14 +32,14 @@ pub fn navbar() -> Html {
                         if *menu_visible {
                             html! {
                             <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><Link<Route> to={Route::Home} classes="text-lg font-bold text-base-content">{"Strona Główna"}</Link<Route>></li>
-                                <li><Link<Route> to={Route::InsideDoors} classes="text-lg font-bold text-base-content">{"Drzwi Wewnątrzklatkowe"}</Link<Route>></li>
-                                <li><Link<Route> to={Route::RoomDoors} classes="text-lg font-bold text-base-content">{"Drzwi Pokojowe"}</Link<Route>></li>
-                                <li><Link<Route> to={Route::SteelDoors} classes="text-lg font-bold text-base-content">{"Drzwi Stalowe"}</Link<Route>></li>
-                                <li><Link<Route> to={Route::StalDoors} classes="text-lg font-bold text-base-content">{"Drzwi z Listwą"}</Link<Route>></li>
-                                <li><Link<Route> to={Route::Installations} classes="text-lg font-bold text-base-content">{"Realizacja"}</Link<Route>></li>
-                                <li><Link<Route> to={Route::AboutUs} classes="text-lg font-bold text-base-content">{"O Nas"}</Link<Route>></li>
-                                <li><Link<Route> to={Route::Contact} classes="text-lg font-bold text-base-content">{"Kontakt"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::Home} classes="text-md font-bold text-base-content">{"Strona Główna"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::InsideDoors} classes="text-md font-bold text-base-content">{"Drzwi Wewnątrzklatkowe"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::RoomDoors} classes="text-md font-bold text-base-content">{"Drzwi Pokojowe"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::SteelDoors} classes="text-md font-bold text-base-content">{"Drzwi Stalowe"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::StalDoors} classes="text-sm font-bold text-base-content">{"Drzwi Wewnątrzklatkowe z Listwą"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::Installations} classes="text-md font-bold text-base-content">{"Realizacja"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::AboutUs} classes="text-md font-bold text-base-content">{"O Nas"}</Link<Route>></li>
+                                <li><Link<Route> to={Route::Contact} classes="text-md font-bold text-base-content">{"Kontakt"}</Link<Route>></li>
                             </ul>
                             }
                         } else {
@@ -52,14 +50,14 @@ pub fn navbar() -> Html {
 
                 // Desktop menu items
                 <ul id="menu-items" class="hidden lg:flex lg:gap-5">
-                    <li><Link<Route> to={Route::Home} classes="text-lg font-bold text-base-content">{"Strona Główna"}</Link<Route>></li>
-                    <li><Link<Route> to={Route::InsideDoors} classes="text-lg font-bold text-base-content">{"Drzwi Wewnątrzklatkowe"}</Link<Route>></li>
-                    <li><Link<Route> to={Route::RoomDoors} classes="text-lg font-bold text-base-content">{"Drzwi Pokojowe"}</Link<Route>></li>
-                    <li><Link<Route> to={Route::SteelDoors} classes="text-lg font-bold text-base-content">{"Drzwi Stalowe"}</Link<Route>></li>
-                    <li><Link<Route> to={Route::StalDoors} classes="text-lg font-bold text-base-content">{"Drzwi z Listwą"}</Link<Route>></li>
-                    <li><Link<Route> to={Route::Installations} classes="text-lg font-bold text-base-content">{"Realizacja"}</Link<Route>></li>
-                    <li><Link<Route> to={Route::AboutUs} classes="text-lg font-bold text-base-content">{"O Nas"}</Link<Route>></li>
-                    <li><Link<Route> to={Route::Contact} classes="text-lg font-bold text-base-content">{"Kontakt"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::Home} classes="text-md font-bold text-base-content">{"Strona Główna"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::InsideDoors} classes="text-md font-bold text-base-content">{"Drzwi Wewnątrzklatkowe"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::RoomDoors} classes="text-md font-bold text-base-content">{"Drzwi Pokojowe"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::SteelDoors} classes="text-md font-bold text-base-content">{"Drzwi Stalowe"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::StalDoors} classes="text-sm font-bold text-base-content">{"Drzwi Wewnątrzklatkowe z Listwą"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::Installations} classes="text-md font-bold text-base-content">{"Realizacja"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::AboutUs} classes="text-md font-bold text-base-content">{"O Nas"}</Link<Route>></li>
+                    <li><Link<Route> to={Route::Contact} classes="text-md font-bold text-base-content">{"Kontakt"}</Link<Route>></li>
                 </ul>
             </div>
         </nav>

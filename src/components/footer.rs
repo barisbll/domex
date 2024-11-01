@@ -8,12 +8,19 @@ pub fn footer() -> Html {
     html! {
     <footer class="footer bg-base-200 text-base-content p-10">
         <aside>
-        <img src="static/img/domex.png" alt="Domex Logo" class="" />
+        <Link<Route> to={Route::Home} classes="btn btn-ghost text-2xl text-base-content">{"DOMEX"}</Link<Route>>
       </aside>
       <nav>
             <h6 class="footer-title">{"Produkty"}</h6>
             <p class="link link-hover"><Link<Route> to={Route::Home}>{"Strona Główna"}</Link<Route>></p>
             <p class="link link-hover"><Link<Route> to={Route::InsideDoors}>{"Drzwi Wewnątrzklatkowe"}</Link<Route>></p>
+            <p class="link link-hover"><Link<Route> to={Route::RoomDoors}>{"Drzwi Pokojowe"}</Link<Route>></p>
+            <p class="link link-hover"><Link<Route> to={Route::SteelDoors}>{"Drzwi Stalowe"}</Link<Route>></p>
+
+      </nav>
+      <nav>
+            <h6 class="footer-title">{"Produkty"}</h6>
+            <p class="link link-hover"><Link<Route> to={Route::StalDoors}>{"Drzwi Wewnątrzklatkowe z Listwą"}</Link<Route>></p>
             <p class="link link-hover"><Link<Route> to={Route::Installations}>{"Realizacja"}</Link<Route>></p>
             <p class="link link-hover"><Link<Route> to={Route::AboutUs}>{"O Nas"}</Link<Route>></p>
             <p class="link link-hover"><Link<Route> to={Route::Contact}>{"Kontakt"}</Link<Route>></p>
