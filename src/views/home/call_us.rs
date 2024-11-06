@@ -24,6 +24,9 @@ pub fn call_us() -> Html {
                         {"+48 664 738 745"}
                     </a>
                 </div>
+                <a href="mailto:robert-kiscinski@wp.pl" class="text-primary hover:text-blue-700 text-xl xl:text-3xl font-semibold">
+                            {"robert-kiscinski@wp.pl"}
+                </a>
             </div>
         </div>
     }
